@@ -8,12 +8,14 @@
 <body style="background:#aaa;">
     Працює :)____4 
 <?php
-$servername = "localhost";
-$database = "generatorue4_uafamily";
-$username = "generatorue4_uafamily_admin";
-$password = "Fenix12358";
+$env = parse_ini_file('.env');
+$DB_SERVER = $env["DB_SERVER"];
+$DB = $env["DB"];
+$DB_USER = $env["DB_USER"];
+$DB_PASS = $env["DB_PASS"];
+
 // Создаем соединение
-$conn = mysqli_connect($servername, $username, $password, $database);
+$conn = mysqli_connect($DB_SERVER, $DB_USER, $DB_PASS, $DB);
 // Проверяем соединение
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
