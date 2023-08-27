@@ -20,9 +20,9 @@ $conn = mysqli_connect($DB_SERVER, $DB_USER, $DB_PASS, $DB);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-$sql = 'SELECT productid, productname FROM product';
+$sql = 'SELECT idproduct, productname FROM product';
 foreach ($conn->query($sql) as $row) {    
-    print $row['productid'] . "\t";
+    print $row['idproducts'] . "\t";
     print $row['productname'] . "\n";
 }
 echo "Connected successfully";
