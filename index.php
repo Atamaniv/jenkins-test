@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body style="background:#aaa;">
-    Працює :)____4 
+    Працює :)____<br/> 
 <?php
 $env = parse_ini_file('.env');
 $DB_SERVER = $env["DB_SERVER"];
