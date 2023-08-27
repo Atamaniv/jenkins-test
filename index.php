@@ -23,7 +23,7 @@ if (!$conn) {
 $sql = 'SELECT idproducts, productname FROM products';
 foreach ($conn->query($sql) as $row) {    
     print $row['idproducts'] . "\t";
-    print $row['productname'] . "\n";
+    print $row['productname'] . "<br/>";
 }
 echo "Connected successfully";
 mysqli_close($conn);
