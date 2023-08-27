@@ -8,7 +8,7 @@
 <body style="background:#aaa;">
     Працює :)____4 
 <?php
-$env = parse_ini_file('.env');
+$env = parse_ini_file('cgi-bin/.env');
 $DB_SERVER = $env["DB_SERVER"];
 $DB = $env["DB"];
 $DB_USER = $env["DB_USER"];
