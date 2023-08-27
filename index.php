@@ -7,5 +7,9 @@
 </head>
 <body style="background:#aaa;">
     Працює :)____4 
+<?php
+echo 1+2;
+?>    
+
 </body>
 </html>
