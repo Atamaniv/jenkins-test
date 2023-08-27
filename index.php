@@ -8,7 +8,7 @@
 <body style="background:#aaa;">
     Працює :)____4 
 <?php
-$env = parse_ini_file('cgi-bin/.env');
+$env = parse_ini_file('.env');
 $DB_SERVER = $env["DB_SERVER"];
 $DB = $env["DB"];
 $DB_USER = $env["DB_USER"];
@@ -19,6 +19,11 @@ $conn = mysqli_connect($DB_SERVER, $DB_USER, $DB_PASS, $DB);
 // Проверяем соединение
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
+}
+$sql = 'SELECT productid, productname FROM product';
+foreach ($conn->query($sql) as $row) {    
+    print $row['productid'] . "\t";
+    print $row['productname'] . "\n";
 }
 echo "Connected successfully";
 mysqli_close($conn);
