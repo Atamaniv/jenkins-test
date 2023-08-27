@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    xxx2
+<body style="background:#aaa;">
+    Працює :)____
 </body>
 </html>
