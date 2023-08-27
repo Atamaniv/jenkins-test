@@ -8,7 +8,18 @@
 <body style="background:#aaa;">
     Працює :)____4 
 <?php
-echo 1+2;
+$servername = "localhost";
+$database = "generatorue4_uafamily";
+$username = "generatorue4_uafamily_admin";
+$password = "Fenix12358";
+// Создаем соединение
+$conn = mysqli_connect($servername, $username, $password, $database);
+// Проверяем соединение
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
+mysqli_close($conn);
 ?>    
 
 </body>
