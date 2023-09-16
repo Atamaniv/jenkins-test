@@ -3,3 +3,8 @@
     border-color:#fff !important;
 }
 
+.footer
+{
+    height: 50px;
+    border-top: solid 1px black;
+}
